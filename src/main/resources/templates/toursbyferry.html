@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="view/head.html :: head"></head>
+<body>
+<!-- pre loader area start -->
+<div th:replace="view/loader :: loader"></div>
+<!-- pre loader area end -->
+<!-- header area start -->
+<div th:replace="view/header :: header"></div>
+<!-- header area end -->
+<!-- search bar area start -->
+<div th:replace="view/search :: search"></div>
+<!-- search bar area end -->
+
+
+<!-- body of  page -->
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div class="row grid">
+    <div class="col-xl-6 col-lg-6 col-md-6 grid-item">
+        <div class="things-img fix mb-30 w-img">
+            <img src="img/best_things/thing-1.jpg" alt="best-things">
+            <div class="things-content">
+                <h4><a href="/aegeanislands">Aegean Islands</a></h4>
+                <span>Starting from €1200</span>
+            </div>
+            <div class="things-btn transition-3">
+                <a href="/aegeanislands" class="btn btn-half-square">View More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-6 col-md-6 grid-item">
+        <div class="things-img fix mb-30 w-img">
+            <img src="img/best_things/thing-2.jpg" alt="best-things">
+            <div class="things-content">
+                <h4><a href="/italy">Italy</a></h4>
+                <span>Starting from €1000</span>
+            </div>
+            <div class="things-btn transition-3">
+                <a href="/italy" class="btn btn-half-square">View More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end of body of  page -->
+
+
+
+
+
+
+<div th:replace="view/footer.html :: footer"></div>
+<div th:replace="view/scripts :: scripts"></div>
+
+</body>
+</html>
