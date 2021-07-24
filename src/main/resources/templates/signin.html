@@ -4,25 +4,49 @@
     <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
-
+<!-- pre loader area start -->
+<div th:replace="view/loader :: loader"></div>
+<!-- pre loader area end -->
+<!-- header area start -->
+<div th:replace="view/header :: header"></div>
+<!-- header area end -->
+<!-- search bar area start -->
+<div th:replace="view/search :: search"></div>
+<!-- search bar area end -->
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 <!-- sign in form area -->
-<form action="/action_page.php">
+<form action="/action_page.php" id="signIn">
     <h2>Sign In Form</h2>
-
+    </br>
     <div class="input-container">
         <i class="fa fa-envelope icon"></i>
         <input class="input-field" type="text" placeholder="Email" name="email">
     </div>
-
+    </br>
     <div class="input-container">
         <i class="fa fa-key icon"></i>
         <input class="input-field" type="password" placeholder="Password" name="psw">
     </div>
-
+    </br>
     <button type="submit" class="btn" >Sign In</button>
 </form>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 
+
+<div th:replace="view/footer.html :: footer"></div>
+<div th:replace="view/scripts :: scripts"></div>
 </body>
 </html>
