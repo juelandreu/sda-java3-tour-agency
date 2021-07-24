@@ -382,7 +382,7 @@ p {
   background-color: rgba(0, 0, 0, 0.4); }
 
 .page-breadcrumb h1 {
-  font-size: 24px;
+  font-size: 50px;
   color: #ffffff;
   text-transform: uppercase;
   margin-bottom: -5px; }
@@ -2010,6 +2010,15 @@ p {
 /*  top: 0;*/
 /*  border-left: 20px solid #d9829b;*/
 /*}*/
+
+#signIn{
+
+
+  padding-left: 500px;
+}
+#register{
+  padding-left: 500px;
+}
 #paymentform{
   padding-left: 300px;
 }
