@@ -11,108 +11,55 @@
 <!-- search bar area start -->
 <div th:replace="view/search :: search"></div>
 <!-- search bar area end -->
+<main id="payment">
 
-
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 <!-- body of  page -->
+
+<div id="paymentform">
+<form id="firstForm">
+
+<h3> Package </h3>
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
-<div class="container">
-    <form id="firstForm">
-        <h3>SELECT PRODUCTS</h3>
-        <input type="radio" class="orders" value="Cameras"required>Cameras:
-        <select>
-            <option value="Canonet" >Canonet Vintage 35mm Film Camera Reconditioned</option>
-            <option value="Mamiya" >Mamiya M645 1000s 120mm Camera with Mamiya Sekor C 55mm f/2.8 Lens</option>
-            <option value="Canon">Canon Sure Shot 105 Zoom 35mm Film Camera Point and Shoot</option>
-            <option value="Olympus-yellow">Olympus Trip 35 Vintage Film Camera with Zuiko 40mm f2.8 Lens Reconditioned</option>
-            <option value="Olympus-pink">Olympus OM10 Slr Vintage 35mm Film Camera with Zuiko 50mm f1.8 Prime Lens</option>
-            <option value="NikonF60">Nikon F60 35mm Film Camera with Nikkor 35-80mm f/4 Lens</option>
-            <option value="NikonF3HP">Nikon F3HP 35mm Film Camera with Nikkor 50mm f/1.8 Lens</option>
-        </select>
-        <input type="radio" class="orders" value="Lenses" required>Camera Lenses:
-        <select>
-            <option value="SMC" >SMC Pentax-M 40-80mm f/2.8 Zoom Lens PK Mount for Pentax Film Camera</option>
-            <option value="Zuiko" >Zuiko 50mm f/1.4 Prime Lens Olympus OM Auto-S</option>
-            <option value="OlympusOM">Olympus OM Zuiko Auto-T 135mm f/3.5 Prime Lens with both end caps</option>
-            <option value="CanonFD">Canon FD 50mm f/1.4 Lens with Filter and Caps For Canon Film Camera</option>
-            <option value="Sigma">Sigma 18mm f/3.5 Ultra Wide Lens For Canon AF Mount</option>
-            <option value="Tokina">Tokina AT-X 28-135mm f/4 Lens for Canon FD Mount</option>
-            <option value="Vivitar">Vivitar Series 1 70-210mm f/3.5 Zoom Macro Lens For Olympus Camera OM Mount</option>
-        </select>
-        <input type="radio" class="orders" value="Accessories" required>Camera Accessories:
-        <select>
-            <option value="Flashgun" >Flashgun with Phillips Flash Bulbs Accesories and Cable Release For Collection</option>
-            <option value="Remote">Canon Remote Switch 60-T3 with Box</option>
-            <option value="Bellows">Canon FL Bellows Boxed In Mint Condition Never Used</option>
-            <option value="SJ800">Nikon SJ800 Flash Filters TN-A1 FL-G1</option>
-            <option value="LensHood">Nikon Lens Hood HB-31</option>
-            <option value="BatteryPack">Canon Battery Pack BP-930</option>
-        </select>
-        <input type="radio" class="orders" value="Lenses" required>Film:
-        <select>
-            <option value="Fujifilm" >Fujifilm NPS 100 120 Colour Film Expired</option>
-            <option value="Kodacolor" >Kodacolor-X 80 120 Colour Negative Film Expired</option>
-            <option value="Agfa">Agfa HDC 200 Colour 110 Film Expired</option>
-            <option value="Polaroid">Polaroid High Definition 35mm Colour Film Expired</option>
-            <option value="Ferrania">Ferrania Europrint 100 35mm Colour Film Camera Expired</option>
-            <option value="Ilford">Ilford Selochrome 620 Film Expired</option>
-            <option value="Tudor">Tudor 126 Film Expired</option>
-        </select>
-        <div class="btn-box">
-            <button type="button" id="next1">Next</button>
-        </div>
+    <form action="/action_page.php">
+        <label for="quantity"> <strong>Number of People(between 1 and 15):</strong></label>
+        <input type="number" id="quantity" name="quantity" min="1" max="15">
 
     </form>
+</form>
+</br>
+<form>
+    <label for="date"><strong>Select starting date:</strong></label>
+    <input type="date" id="date">
 
-    <form id="secondForm">
-        <h3>SHIPPING ADDRESS</h3>
-        <input type="text"placeholder="First Name" required>
-        <input type="text"placeholder="Last Name" required>
-        <input type="text"placeholder="Address" required>
+    </br>
+    </br>
+    <button type="submit" class="btn" href="/success">Reserve Now</button>
 
-        <div class="btn-box">
-            <button type="button" id="back1">Back</button>
-            <button type="button" id="next2">Next</button>
-        </div>
+</form>
 
-    </form>
 
-    <form id="thirdForm">
-        <h3>CARD INFORMATION</h3>
-        <label>Type: </label>
-        <input type= "radio"  class = "orders" value= "Female" required/>Visa
-        <input type= "radio"  class = "orders" value= "Male" required/>Mastercard
-        <input type= "radio"  class = "orders" value= "Other" required/>Other
-        <input type="text"placeholder="Card Number" required>
-        <input type="password"placeholder="Security Code" required>
-
-        <div class="btn-box">
-            <button type="button" id="back2">Back</button>
-            <button type="button" id="submit">Submit</button>
-        </div>
-
-    </form>
-    <dvi class="step-row">
-        <div id="progress"></div>
-        <div class="step-column"><small>Step 1</small></div>
-        <div class="step-column"><small>Step 2</small></div>
-        <div class="step-column"><small>Step 3</small></div>
-    </dvi>
 </div>
 
-<script src="orderPage.js"></script>
+</br>
+</br>
+    <script src="orderPage.js"></script>
+    <div th:replace="view/footer.html :: footer"></div>
+    <div th:replace="view/scripts :: scripts"></div>
+</main>
+
 
 
 <!-- end of body of  page -->
 
-<div th:replace="view/footer.html :: footer"></div>
-<div th:replace="view/scripts :: scripts"></div>
+
 </body>
 </html>
