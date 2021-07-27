@@ -43,4 +43,9 @@ public class Tour {
     protected String featuredImage;
 
     protected LocalDateTime createdAt;
+
+
+    public boolean isFeatured() {
+        return featured;
+    }
 }

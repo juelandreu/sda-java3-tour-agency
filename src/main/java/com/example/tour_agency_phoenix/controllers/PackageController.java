@@ -1,6 +1,7 @@
 package com.example.tour_agency_phoenix.controllers;
 
 import com.example.tour_agency_phoenix.services.tour.TourService;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +17,11 @@ public class PackageController {
     @GetMapping("/packages")
     public String packages(ModelMap map, String keyword){
 
-        if (keyword !=null)
-            map.addAttribute("ta_tour.name",tourService.findByKeyword(keyword));
+        if (Strings.isNotBlank(keyword))
+            map.addAttribute("packages",tourService.findByKeyword(keyword));
+        else
+            map.addAttribute("packages",tourService.getFeaturedTours());
+
 
         return "packages";
     }

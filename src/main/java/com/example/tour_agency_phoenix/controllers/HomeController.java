@@ -23,8 +23,6 @@ public class HomeController {
 
     @GetMapping("/home")
     public String home(ModelMap map, String keyword){
-//        tourService.createTour();
-        List<Tour> featuredTours =tourService.getFeaturedTours();
 
 
         map.addAttribute("featuredTours", tourService.getFeaturedTours());
