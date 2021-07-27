@@ -20,4 +20,5 @@ public class UserServiceImpl implements UserService {
     public List<User> getFeaturedUsers() {
         return userRepository.findAll();
     }
+
 }

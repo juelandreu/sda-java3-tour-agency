@@ -1,7 +1,7 @@
-<div class="search-bar-wrapper" th:fragment="search">
+<div class="search-bar-wrapper" th:fragment="search" th:action = "@{/packages}" method="get">
   <div class="search-inner">
     <form action="#">
-      <input type="text" placeholder="Enter Keyword...">
+      <input type="text" placeholder="Enter Keyword..." name="keyword">
       <button type="submit"><i class="fal fa-search"></i></button>
     </form>
   </div>

@@ -1,11 +1,13 @@
 package com.example.tour_agency_phoenix.controllers;
 
+import com.example.tour_agency_phoenix.domain.Tour;
 import com.example.tour_agency_phoenix.services.book.BookService;
 import com.example.tour_agency_phoenix.services.tour.TourService;
 import com.example.tour_agency_phoenix.services.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -20,10 +22,14 @@ public class HomeController {
     }
 
     @GetMapping("/home")
-    public String home(ModelMap map){
+    public String home(ModelMap map, String keyword){
+//        tourService.createTour();
+        List<Tour> featuredTours =tourService.getFeaturedTours();
+
+
         map.addAttribute("featuredTours", tourService.getFeaturedTours());
-        map.addAttribute("featuredTours", bookService.getFeaturedBookings());
-        map.addAttribute("featuredTours", userService.getFeaturedUsers());
+        map.addAttribute("featuredBookings", bookService.getFeaturedBookings());
+        map.addAttribute("featuredUsers", userService.getFeaturedUsers());
         return "index";
     }
 }
