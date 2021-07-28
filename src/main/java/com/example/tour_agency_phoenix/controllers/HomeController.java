@@ -26,7 +26,8 @@ public class HomeController {
     public String home(ModelMap map, String keyword){
         List<Tour> featuredTours =tourService.getFeaturedTours();
 
-//        tourService.createTour();
+
+       //tourService.createTour();
 
         map.addAttribute("featuredTours", tourService.getFeaturedTours());
         map.addAttribute("featuredBookings", bookService.getFeaturedBookings());
