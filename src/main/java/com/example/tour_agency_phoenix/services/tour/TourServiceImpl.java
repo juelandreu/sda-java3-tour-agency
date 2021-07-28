@@ -39,20 +39,23 @@ public class TourServiceImpl implements TourService {
     @Override
     public void createTour(){
         Tour tour = Tour.builder()
-                .name("South Albania")
+                .name("North Albania")
                 .duration(5)
                 .price(500)
                 .sale(true)
-                .salePrice(300)
-                .featured(false)
-                .image("static/img/south/south1.jpg")
-                .createdAt(LocalDateTime.now())
+                .salePrice(255)
+                .featured(true)
+                .image("static/img/north/Koman-Lake.jpg")
+                .createdAt(LocalDateTime.of(2021,Month.JULY,27,12,00))
                 .transport(TransportType.BUS)
-                .reservations(5)
-                .title("5 Days Albanian Exotics Riviera and Gjirokstra")
-                .subtitle("Tour Price Starting From 300€")
-                .description("With its jumble of rugged mountains fringed by pristine curls of beach, Albania's south is the most appealing part of the country.")
-                .itinerary("southalbania.html")
+                .reservations(7)
+                .featuredImage("static/img/north/Koman-Lake.jpg")
+                .saleStartAt(LocalDateTime.now())
+                .saleEndAt(LocalDateTime.of(2021,Month.SEPTEMBER,24,12,00))
+                .title("5 Days Tour to Northern Albania ")
+                .subtitle("Price starting from 255€")
+                .description("Explore mountainous terrain and small villages on this through the remote regions of northern Albania and see the ancient Rozafa Castle, then continue through the Albanian Alps to the scenic Rugova Valley,then take the ferry across Lake Koman.")
+                .itinerary("/northalbania")
                 .build();
         tourRepository.save(tour);
 
