@@ -1,9 +1,13 @@
 <div class="search-bar-wrapper" th:fragment="search" method="get">
   <div class="search-inner">
+<!--      <div th:replace="view/pricerange :: pricerange"></div>-->
     <form th:action ="@{/packages}">
       <input type="text" placeholder="Enter Keyword..." name="keyword">
       <button type="submit"><i class="fal fa-search"></i></button>
     </form>
   </div>
   <a href="javascript:void(0);" class="search-close"><i class="fal fa-times"></i></a>
+
+
+
 </div>

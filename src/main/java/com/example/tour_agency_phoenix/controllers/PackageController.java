@@ -5,6 +5,9 @@ import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.UUID;
 
 @Controller
 public class PackageController {
@@ -24,5 +27,12 @@ public class PackageController {
 
 
         return "packages";
+    }
+
+    @GetMapping("/packages/{id}")
+    public String packages(ModelMap map, @PathVariable UUID id){
+        map.addAttribute("package",tourService.findById(id));
+
+        return "package";
     }
 }

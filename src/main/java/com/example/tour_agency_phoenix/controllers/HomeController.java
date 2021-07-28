@@ -21,9 +21,11 @@ public class HomeController {
         this.userService = userService;
     }
 
+
     @GetMapping("/home")
     public String home(ModelMap map, String keyword){
 
+//        tourService.createTour();
 
         map.addAttribute("featuredTours", tourService.getFeaturedTours());
         map.addAttribute("featuredBookings", bookService.getFeaturedBookings());

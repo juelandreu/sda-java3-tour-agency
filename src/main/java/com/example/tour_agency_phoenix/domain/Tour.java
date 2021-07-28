@@ -44,6 +44,11 @@ public class Tour {
 
     protected LocalDateTime createdAt;
 
+    protected String title;
+    protected String subtitle;
+    protected String description;
+    protected String itinerary;
+
 
     public boolean isFeatured() {
         return featured;

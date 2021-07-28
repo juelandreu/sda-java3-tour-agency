@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 import java.util.UUID;
 
-public interface TourRepository extends JpaRepository<Tour, UUID> {
+public interface TourRepository extends JpaRepository<Tour, UUID>{
     @Query(value = "SELECT t FROM Tour t where t.featured = 1")
      List<Tour> getFeaturedTours();
 
