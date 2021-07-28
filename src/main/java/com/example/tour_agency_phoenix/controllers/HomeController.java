@@ -24,6 +24,7 @@ public class HomeController {
 
     @GetMapping("/home")
     public String home(ModelMap map, String keyword){
+        List<Tour> featuredTours =tourService.getFeaturedTours();
 
 //        tourService.createTour();
 
