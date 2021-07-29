@@ -10,6 +10,6 @@ public interface TourService {
      void createTour();
      List<Tour> getFeaturedTours();
      List<Tour> findByKeyword(String keyword);
-
      Tour findById(UUID id);
+     List<Tour> getTopTours();
 }

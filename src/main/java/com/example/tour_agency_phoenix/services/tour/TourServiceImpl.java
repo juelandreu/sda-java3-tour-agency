@@ -35,6 +35,9 @@ public class TourServiceImpl implements TourService {
                 .orElseThrow(() -> new EntityNotFoundException("Object with id not found"));
     }
 
+    public List<Tour> getTopTours() {
+        return tourRepository.findAll();
+    }
 
     @Override
     public void createTour(){

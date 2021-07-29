@@ -15,4 +15,7 @@ public interface TourRepository extends JpaRepository<Tour, UUID>{
 
     @Query(value = "SELECT t FROM Tour t where t.name like %:keyword%")
      List<Tour> findByKeyword(@Param("keyword") String keyword);
+
+    @Query(value = "SELECT t FROM Tour t where t.reservations >= 7")
+    List<Tour> getTopTours();
 }

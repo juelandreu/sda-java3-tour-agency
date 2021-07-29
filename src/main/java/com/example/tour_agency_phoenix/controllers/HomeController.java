@@ -24,12 +24,14 @@ public class HomeController {
 
     @GetMapping("/home")
     public String home(ModelMap map, String keyword){
-//        List<Tour> featuredTours =tourService.getFeaturedTours();
+        List<Tour> featuredTours =tourService.getFeaturedTours();
+        List<Tour> topTours =tourService.getTopTours();
 
 
        //tourService.createTour();
 
         map.addAttribute("featuredTours", tourService.getFeaturedTours());
+        map.addAttribute("topTours", tourService.getTopTours());
         map.addAttribute("featuredBookings", bookService.getFeaturedBookings());
         map.addAttribute("featuredUsers", userService.getFeaturedUsers());
         return "index";
