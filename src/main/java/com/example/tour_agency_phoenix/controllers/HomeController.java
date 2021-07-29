@@ -29,6 +29,7 @@ public class HomeController {
 
 
        //tourService.createTour();
+        //userService.createUser();
 
         map.addAttribute("featuredTours", tourService.getFeaturedTours());
         map.addAttribute("topTours", tourService.getTopTours());

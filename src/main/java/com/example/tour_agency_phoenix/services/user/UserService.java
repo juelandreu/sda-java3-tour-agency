@@ -10,4 +10,5 @@ import java.util.UUID;
 public interface UserService extends UserDetailsService {
      List<User> getFeaturedUsers();
     User findById(UUID id);
+    void createUser();
 }

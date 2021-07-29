@@ -164,26 +164,25 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-4 col-lg-6 col-md-6">
-                            <div class="single-package mb-30 w-img" th:each="tour: ${topTours}" th:if = "${tour.reservations >= 7}" >
-                                <img src="img/package/package-1.jpg" alt="package-1">
-                                <div class="package-content">
-                                    <div class="package-info">
-                                        <h3><a th:href="@{/packages/{id}(id=${tour.id})}" th:text="${tour.name}"></a></h3>
-                                        <p th:text="${tour.title}"></p>
-                                        <p th:text="${tour.subtitle}"></p>
-                                        <div class="package-bottom d-flex justify-content-between">
-                                            <div class="rating">
-                                                <ul>
-                                                    <li><span><i class="fas fa-star"></i></span></li>
-                                                    <li><span><i class="fas fa-star"></i></span></li>
-                                                    <li><span><i class="fas fa-star"></i></span></li>
-                                                    <li><span><i class="fas fa-star"></i></span></li>
-                                                    <li><span><i class="fas fa-star"></i></span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6" th:each="tour: ${topTours}" th:if = "${tour.reservations >= 7}">
+                        <div class="things-img fix mb-30 w-img">
+                            <img src="img/package/package-1.jpg" alt="best-things">
+                            <div class="package-content">
+                                <div class="package-info">
+                                <h4><a th:href="@{/packages/{id}(id=${tour.id})}" th:text="${tour.name}"></a></h4>
+                                <p th:text="${tour.title}"></p>
+                                <p th:text="${tour.subtitle}"></p>
+                                <div class="package-bottom d-flex justify-content-between">
+                                    <div class="rating">
+                                        <ul>
+                                            <li><span><i class="fas fa-star"></i></span></li>
+                                            <li><span><i class="fas fa-star"></i></span></li>
+                                            <li><span><i class="fas fa-star"></i></span></li>
+                                            <li><span><i class="fas fa-star"></i></span></li>
+                                            <li><span><i class="fas fa-star"></i></span></li>
+                                        </ul>
                                     </div>
+                                </div>
                                 </div>
                             </div>
                         </div>

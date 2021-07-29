@@ -19,12 +19,10 @@ public class PackageController {
 
     @GetMapping("/packages")
     public String packages(ModelMap map, String keyword){
-
         if (Strings.isNotBlank(keyword))
             map.addAttribute("packages",tourService.findByKeyword(keyword));
         else
             map.addAttribute("packages",tourService.getFeaturedTours());
-
 
         return "packages";
     }
