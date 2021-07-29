@@ -2,8 +2,12 @@ package com.example.tour_agency_phoenix.services.user;
 
 import com.example.tour_agency_phoenix.domain.User;
 
-import java.util.List;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-public interface UserService {
-    public List<User> getFeaturedUsers();
+import java.util.List;
+import java.util.UUID;
+
+public interface UserService extends UserDetailsService {
+     List<User> getFeaturedUsers();
+    User findById(UUID id);
 }
