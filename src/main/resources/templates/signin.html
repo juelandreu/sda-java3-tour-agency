@@ -24,19 +24,19 @@
 </br>
 
 <!-- sign in form area -->
-<form id="signIn" th:action="@{/signin}" method="post">
+<form id="signIn" th:action="@{/login}" method="POST">
     <h2>Sign In Form</h2>
     </br>
     <div th:if="${param.error}"> Invalid Username and Password </div>
     <div th:if="${param.logout}"> You Have Been Logged Out </div>
     <div class="input-container">
         <i class="fa fa-envelope icon"></i>
-        <input class="input-field" type="email" placeholder="Email" name="email">
+        <input class="input-field" type="email" th:placeholder="Email" name="email">
     </div>
     </br>
     <div class="input-container">
         <i class="fa fa-key icon"></i>
-        <input class="input-field" type="password" placeholder="Password" name="password">
+        <input class="input-field" type="password" th:placeholder="Password" name="password">
     </div>
     </br>
 <!--<a th:href="@{/user/{id}(id=${user.id})}"></a>-->

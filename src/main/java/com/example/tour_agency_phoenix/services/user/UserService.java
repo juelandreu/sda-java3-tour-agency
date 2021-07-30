@@ -7,8 +7,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import java.util.List;
 import java.util.UUID;
 
-public interface UserService extends UserDetailsService {
-     List<User> getFeaturedUsers();
+public interface UserService {
+    List<User> getFeaturedUsers();
     User findById(UUID id);
     void createUser();
 }

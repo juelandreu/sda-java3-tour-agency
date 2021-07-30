@@ -25,22 +25,33 @@
 
 
 
-<form action="/action_page.php" id="register">
+<form th:action="@{/register}" th:object="${user}" method="post" id="register">
   <h2>Register Form</h2>
   </br>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+    <input class="input-field" type="text" th:field="*{firstName}" placeholder="First Name">
   </div>
 </br>
   <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" th:field="*{lastName}" placeholder="Last Name" name="lstnm">
+  </div>
+  </br>
+  <div class="input-container">
     <i class="fa fa-envelope icon"></i>
-    <input class="input-field" type="text" placeholder="Email" name="email">
+    <input class="input-field" type="text" th:field="*{email}" placeholder="Email" name="email">
+  </div>
+  </br>
+  <div class="input-container">
+    <label for="date"></label>
+    <i class="fa fa-calendar icon"></i>
+    <input type="date" th:field="*{birthDate}"id="date">
   </div>
   </br>
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Password" name="psw">
+    <input class="input-field" type="password" th:field="*{password}" placeholder="Password" name="psw">
   </div>
   </br>
   <button type="submit" class="btn">Register</button>

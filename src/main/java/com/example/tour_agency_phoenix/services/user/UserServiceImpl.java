@@ -50,12 +50,4 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-        Optional<User> user = userRepository.findByEmail(email);
-
-        user.orElseThrow(()->new UsernameNotFoundException("Email Not Found"+ email));
-
-        return user.map(MyUserDetals::new).get();
-    }
 }

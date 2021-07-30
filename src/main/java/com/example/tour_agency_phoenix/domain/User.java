@@ -1,10 +1,7 @@
 package com.example.tour_agency_phoenix.domain;
 
 import com.example.tour_agency_phoenix.utils.Role;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 import org.springframework.security.core.GrantedAuthority;
@@ -15,6 +12,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.UUID;
 
 @Data
@@ -22,6 +20,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 @Table(name = "ta_user")
 public class User {
     @Id
@@ -38,5 +37,6 @@ public class User {
     protected Role role;
     protected LocalDateTime birthDate;
 
-
 }
+
+
