@@ -40,6 +40,21 @@ public class TourServiceImpl implements TourService {
     }
 
     @Override
+    public List<Tour> getToursByBus() {
+        return tourRepository.tourByBus();
+    }
+
+    @Override
+    public List<Tour> getToursByPlane() {
+        return tourRepository.tourByPlane();
+    }
+
+    @Override
+    public List<Tour> getToursByCruise() {
+        return tourRepository.tourByCruise();
+    }
+
+    @Override
     public void createTour(){
         Tour tour = Tour.builder()
                 .name("Spain")

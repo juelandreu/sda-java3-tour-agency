@@ -38,13 +38,12 @@
                                     <li>
                                         <a href="/home"> Home</a>
                                     </li>
-                                    <li><a href="/packages">Packages</a></li>
-<!--                                    <li><a href="/packages" class="arrow"> Packages </a>-->
-<!--                                        <ul class="submenu">-->
-<!--                                            <li><a href="/toursbyplane">Tours by plane</a></li>-->
-<!--                                            <li><a href="/toursbybus">Tours by bus </a></li>-->
-<!--                                            <li><a href="/toursbyferry">Tours by ferry</a></li>-->
-<!--                                        </ul>-->
+                                    <li><a href="/packages" class="arrow"> Tours </a>
+                                        <ul class="submenu">
+                                            <li><a th:href="@{/toursbyplane}">Tours by plane</a></li>
+                                            <li><a th:href="@{/toursbybus}">Tours by bus </a></li>
+                                            <li><a th:href="@{/toursbycruise}">Tours by cruise</a></li>
+                                        </ul>
                                     </li>
                                     <li><a href="/about">About</a></li>
                                 </ul>

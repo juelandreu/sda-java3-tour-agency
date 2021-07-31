@@ -12,4 +12,7 @@ public interface TourService {
      List<Tour> findByKeyword(String keyword);
      Tour findById(UUID id);
      List<Tour> getTopTours();
+     List<Tour> getToursByBus();
+     List<Tour> getToursByPlane();
+     List<Tour> getToursByCruise();
 }

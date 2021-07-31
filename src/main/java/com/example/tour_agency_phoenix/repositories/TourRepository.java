@@ -18,4 +18,11 @@ public interface TourRepository extends JpaRepository<Tour, UUID>{
 
     @Query(value = "SELECT t FROM Tour t where t.reservations >= 7")
     List<Tour> getTopTours();
+
+    @Query(value = "SELECT t FROM Tour t where t.transport = 'BUS'")
+    List<Tour> tourByBus();
+    @Query(value = "SELECT t FROM Tour t where t.transport = 'PLANE'")
+    List<Tour> tourByPlane();
+    @Query(value = "SELECT t FROM Tour t where t.transport = 'CRUISE'")
+    List<Tour> tourByCruise();
 }

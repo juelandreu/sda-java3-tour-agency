@@ -12,74 +12,36 @@
 <div th:replace="view/search :: search"></div>
 <!-- search bar area end -->
 <!-- body of  page -->
-</br>
-</br>
-</br>
-</br>
-</br>
-</br>
+
+<section class="best-things pt-80 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2">
+                <div class="sec-title text-center mb-50">
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <h1>Tours By Bus</h1>
+                </div>
+            </div>
+        </div>
 <div class="row grid">
-    <div class="col-xl-6 col-lg-6 col-md-6 grid-item">
+    <div class="col-xl-6 col-lg-6 col-md-6 grid-item" th:each ="tour: ${tourbybus}">
         <div class="things-img fix mb-30 w-img">
             <img src="img/best_things/thing-1.jpg" alt="best-things">
             <div class="things-content">
-                <h4><a href="/southalbania">South Albania</a></h4>
-                <span>Starting from €300</span>
+                <h4><a th:href="@{/packages/{id}(id=${tour.id})}" th:text="${tour.name}"></a></h4>
+                <span>Starting from €</span><span th:text="${tour.salePrice}"></span>
             </div>
             <div class="things-btn transition-3">
-                <a href="/southalbania" class="btn btn-half-square">View More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-6 col-md-6 grid-item">
-        <div class="things-img fix mb-30 w-img">
-            <img src="img/best_things/thing-2.jpg" alt="best-things">
-            <div class="things-content">
-                <h4><a href="/northAlbania">North Albania</a></h4>
-                <span>Starting from €300</span>
-            </div>
-            <div class="things-btn transition-3">
-                <a href="/northAlbania" class="btn btn-half-square">View More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-6 col-md-6 grid-item">
-        <div class="things-img fix mb-30 w-img">
-            <img src="img/best_things/thing-3.jpg" alt="best-things">
-            <div class="things-content">
-                <h4><a href="/aegeanislands">Aegean Islands</a></h4>
-                <span>Starting from €1200</span>
-            </div>
-            <div class="things-btn transition-3">
-                <a href="/aegeanislands" class="btn btn-half-square">View More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-6 col-md-6 grid-item">
-        <div class="things-img fix mb-30 w-img">
-            <img src="img/best_things/thing-4.jpg" alt="best-things">
-            <div class="things-content">
-                <h4><a href="/italy">Italy</a></h4>
-                <span>Starting from €1000</span>
-            </div>
-            <div class="things-btn transition-3">
-                <a href="/italy" class="btn btn-half-square">View More</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-xl-3 col-lg-6 col-md-6 grid-item">
-        <div class="things-img fix mb-30 w-img">
-            <img src="img/best_things/thing-3.jpg" alt="best-things">
-            <div class="things-content">
-                <h4><a href="/spain">Spain</a></h4>
-                <span>Starting from €800</span>
-            </div>
-            <div class="things-btn transition-3">
-                <a href="/spain" class="btn btn-half-square">View More</a>
+                <a th:href="@{/packages/{id}(id=${tour.id})}" class="btn btn-half-square">View More</a>
             </div>
         </div>
     </div>
 </div>
+    </div>
+</section>
 <!-- end of body of  page -->
 <div th:replace="view/footer.html :: footer"></div>
 <div th:replace="view/scripts :: scripts"></div>
