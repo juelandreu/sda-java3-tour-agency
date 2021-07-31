@@ -9,6 +9,7 @@ import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -30,7 +31,7 @@ public class TourServiceImpl implements TourService {
     }
 
     @Override
-    public Tour findById(UUID id) {
+    public Optional<Tour> findById(UUID id) {
         return tourRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Object with id not found"));
     }

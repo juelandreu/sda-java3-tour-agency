@@ -30,28 +30,28 @@
   </br>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" th:field="*{firstName}" placeholder="First Name">
+    <input class="input-field" type="text" th:value="${user.firstName}" th:field="*{firstName}" placeholder="First Name">
   </div>
 </br>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" th:field="*{lastName}" placeholder="Last Name" name="lstnm">
+    <input class="input-field" type="text" th:value="${user.lastName}" th:field="*{lastName}" placeholder="Last Name" name="lstnm">
   </div>
   </br>
   <div class="input-container">
     <i class="fa fa-envelope icon"></i>
-    <input class="input-field" type="text" th:field="*{email}" placeholder="Email" name="email">
+    <input class="input-field" type="text" th:value="${user.email}" th:field="*{email}" placeholder="Email" name="email">
   </div>
   </br>
   <div class="input-container">
     <label for="date"></label>
     <i class="fa fa-calendar icon"></i>
-    <input type="date" th:field="*{birthDate}"id="date">
+    <input type="date" th:value="${user.birthDate}" th:field="*{birthDate}"id="date">
   </div>
   </br>
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" th:field="*{password}" placeholder="Password" name="psw">
+    <input class="input-field" type="password" th:value="${user.password}" th:field="*{password}" placeholder="Password" name="psw">
   </div>
   </br>
   <button type="submit" class="btn">Register</button>
