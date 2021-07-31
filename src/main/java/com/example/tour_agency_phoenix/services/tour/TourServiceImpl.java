@@ -32,8 +32,7 @@ public class TourServiceImpl implements TourService {
 
     @Override
     public Optional<Tour> findById(UUID id) {
-        return tourRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("Object with id not found"));
+        return tourRepository.findById(id);
     }
 
     public List<Tour> getTopTours() {
@@ -53,6 +52,11 @@ public class TourServiceImpl implements TourService {
     @Override
     public List<Tour> getToursByCruise() {
         return tourRepository.tourByCruise();
+    }
+
+    @Override
+    public List<Tour> findAll() {
+        return tourRepository.findAll();
     }
 
     @Override
