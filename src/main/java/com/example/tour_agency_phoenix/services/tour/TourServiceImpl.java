@@ -55,6 +55,11 @@ public class TourServiceImpl implements TourService {
     }
 
     @Override
+    public int save(SaveTourRequest request) {
+        return 0;
+    }
+
+    @Override
     public List<Tour> findAll() {
         return tourRepository.findAll();
     }

@@ -29,7 +29,7 @@ public class PackageController {
 
     @GetMapping("/packages/{id}")
     public String packages(ModelMap map, @PathVariable UUID id){
-        map.addAttribute("package",tourService.findById(id));
+        map.addAttribute("package",tourService.findById(id).orElseThrow());
         return "package";
     }
 

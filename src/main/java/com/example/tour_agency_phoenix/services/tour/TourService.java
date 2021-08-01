@@ -17,5 +17,7 @@ public interface TourService {
      List<Tour> getToursByPlane();
      List<Tour> getToursByCruise();
 
+     int save(SaveTourRequest request);
+
      List<Tour> findAll();
 }

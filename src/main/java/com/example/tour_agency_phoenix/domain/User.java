@@ -37,6 +37,9 @@ public class User {
     protected Role role;
     protected LocalDateTime birthDate;
 
+
+
+
 }
 
 

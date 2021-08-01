@@ -12,12 +12,12 @@ public interface TourRepository extends JpaRepository<Tour, UUID>{
     @Query(value = "SELECT t FROM Tour t where t.featured = 1")
      List<Tour> getFeaturedTours();
 
-
     @Query(value = "SELECT t FROM Tour t where t.name like %:keyword%")
      List<Tour> findByKeyword(@Param("keyword") String keyword);
 
     @Query(value = "SELECT t FROM Tour t where t.reservations >= 7")
     List<Tour> getTopTours();
+
 
     @Query(value = "SELECT t FROM Tour t where t.transport = 'BUS'")
     List<Tour> tourByBus();
