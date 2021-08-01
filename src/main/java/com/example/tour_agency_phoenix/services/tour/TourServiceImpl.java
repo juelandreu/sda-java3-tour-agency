@@ -67,23 +67,22 @@ public class TourServiceImpl implements TourService {
     @Override
     public void createTour(){
         Tour tour = Tour.builder()
-                .name("Spain")
-                .duration(5)
-                .price(800)
+                .name("Italy")
+                .duration(7)
+                .price(1000)
                 .sale(false)
-                .salePrice(800)
+                .salePrice(1000)
                 .featured(false)
-                .featuredImage("spain.jpg")
-                .image("static/img/spain/basque.jpg")
-                .createdAt(LocalDateTime.now())
-                .transport(TransportType.PLANE)
-                .reservations(10)
-                .title("The Grand Spain Tour")
-                .subtitle("Price starting from 800€")
-                .description("A brisk five-day holiday in Spanish Basque Country could be just what the doctor ordered.")
-                .itinerary("/Spain")
+                .image("italy.jpg")
+                .createdAt(LocalDateTime.of(2021,Month.JULY,22,12,00))
+                .transport(TransportType.CRUISE)
+                .reservations(9)
+                .featuredImage("italy.jpg")
+                .title("Traditional 7 Day Italy Itinerary")
+                .subtitle("Price starting from 1000€")
+                .description("It’s hard to find a destination with a richer history than Italy. ")
+                .itinerary("/italy")
                 .build();
         tourRepository.save(tour);
-
     }
 }
