@@ -29,7 +29,7 @@
 <div class="row grid">
     <div class="col-xl-6 col-lg-6 col-md-6 grid-item" th:each ="tour: ${tourbybus}">
         <div class="things-img fix mb-30 w-img">
-            <img src="img/best_things/thing-1.jpg" alt="best-things">
+            <img th:src="'/img/images/' + ${tour.image}" alt="best-things">
             <div class="things-content">
                 <h4><a th:href="@{/packages/{id}(id=${tour.id})}" th:text="${tour.name}"></a></h4>
                 <span>Starting from €</span><span th:text="${tour.salePrice}"></span>

@@ -1,8 +1,7 @@
 package com.example.tour_agency_phoenix.controllers;
 
 import com.example.tour_agency_phoenix.domain.User;
-import com.example.tour_agency_phoenix.dto.UserDto;
-import lombok.AllArgsConstructor;
+import com.example.tour_agency_phoenix.services.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -10,7 +9,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/register")
 public class RegistrationController {
-//    private final RegistrationServer registrationServer;
+    private final UserService userService;
+
+    public RegistrationController(UserService userService) {
+        this.userService = userService;
+    }
 
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView register(){
@@ -20,10 +23,12 @@ public class RegistrationController {
         modelAndView.setViewName("register");
         return modelAndView;
     }
-//    @PostMapping
-//    public String register(@RequestBody RegistrationRequest request) {
-//        return registrationServer.register(request);
-//    }
-//
+
+    @PostMapping
+    public String register(User request) {
+        userService.save(request);
+        return "userpage";
+    }
+
 
 }

@@ -27,7 +27,7 @@ public class HomeController {
         List<Tour> featuredTours =tourService.getFeaturedTours();
         List<Tour> topTours =tourService.getTopTours();
 
-//        tourService.createTour();
+//       tourService.createTour();
         //userService.createUser();
 
         map.addAttribute("featuredTours", tourService.getFeaturedTours());

@@ -87,4 +87,9 @@ public class UserServiceImpl implements UserService {
         var item = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Id is invalid"));
         userRepository.delete(item);
     }
+
+    @Override
+    public Optional<User> findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 }
