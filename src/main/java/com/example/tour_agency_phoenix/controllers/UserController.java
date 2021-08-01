@@ -39,6 +39,11 @@ public class UserController {
         return userService.findAll();
     }
 
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable UUID id) {
+        userService.delete(id);
+    }
+
 
 
 

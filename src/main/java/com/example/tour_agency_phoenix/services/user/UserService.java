@@ -15,4 +15,5 @@ public interface UserService {
     void createUser();
    List<User> findAll();
    UUID save(User user);
+    void delete(UUID id);
 }

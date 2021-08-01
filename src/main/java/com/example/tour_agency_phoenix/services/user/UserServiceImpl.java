@@ -81,4 +81,10 @@ public class UserServiceImpl implements UserService {
         userRepository.save(newItem);
         return newItem.getId();
     }
+
+    @Override
+    public void delete(UUID id) {
+        var item = userRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Id is invalid"));
+        userRepository.delete(item);
+    }
 }
