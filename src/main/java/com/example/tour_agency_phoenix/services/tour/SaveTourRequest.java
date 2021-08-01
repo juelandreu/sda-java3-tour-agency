@@ -7,10 +7,8 @@ import java.util.UUID;
 
 public class SaveTourRequest {
     protected UUID id;
-
     protected String name;
     protected TransportType transport;
-
     protected double price;
     protected int duration;
     protected String image;
@@ -19,14 +17,10 @@ public class SaveTourRequest {
     protected LocalDateTime saleStartAt;
     protected LocalDateTime saleEndAt;
     protected Integer reservations;
-
     protected boolean featured = false;
     protected String featuredImage;
-
-
     protected String title;
     protected String subtitle;
     protected String description;
     protected String itinerary;
-
 }

@@ -8,8 +8,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import javax.servlet.MultipartConfigElement;
-
 @SpringBootApplication
 @EnableJpaRepositories(basePackageClasses = UserRepository.class)
 public class TourAgencyPhoenixApplication {
@@ -17,7 +15,6 @@ public class TourAgencyPhoenixApplication {
     public static void main(String[] args) {
         SpringApplication.run(TourAgencyPhoenixApplication.class, args);
     }
-
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
